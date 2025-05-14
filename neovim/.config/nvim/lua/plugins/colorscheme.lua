@@ -1,3 +1,4 @@
+--[[
 return {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -62,4 +63,15 @@ return {
         transparent_background = true,
         kitty = true,
     },
+}
+]]
+return {
+	"rose-pine/neovim",
+	name = "rose-pine",
+	opts = {
+		variant = "dawn",
+	},
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end,
 }
