@@ -35,3 +35,4 @@ if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
 fi
 
 # any other login‐only exports go here
+export ANTHROPIC_API_KEY=$(security find-generic-password -a $USER -s "ANTHROPIC_API_KEY" -w)
