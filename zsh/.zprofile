@@ -34,6 +34,13 @@ if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
   source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
+# 6) eza (if installed)
+if (( $+commands[eza] )); then
+  alias ls='eza --group-directories-first --icons'
+  alias ll='eza -la --git --group-directories-first --icons'
+  export EZA_CONFIG_DIR=$HOME/.config/eza
+fi
+
 # any other login‐only exports go here
 export ANTHROPIC_API_KEY=$(security find-generic-password -a $USER -s "ANTHROPIC_API_KEY" -w)
 export OPENAI_API_KEY=$(security find-generic-password -a $USER -s "OPENAI_API_KEY" -w)
