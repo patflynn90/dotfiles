@@ -36,3 +36,4 @@ fi
 
 # any other login‐only exports go here
 export ANTHROPIC_API_KEY=$(security find-generic-password -a $USER -s "ANTHROPIC_API_KEY" -w)
+export OPENAI_API_KEY=$(security find-generic-password -a $USER -s "OPENAI_API_KEY" -w)
